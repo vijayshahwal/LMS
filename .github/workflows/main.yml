@@ -8,12 +8,13 @@ jobs:
   build:
     name: building of code
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: go-bookstore
     steps:
       - uses: actions/checkout@v3
       - name: setup Go
         uses: actions/setup-go@v4
-      - name: change dir
-        run: cd go-bookstore
       - name: show current path 
         run: pwd
       - name: install dependencies
