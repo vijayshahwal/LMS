@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: setup Go
-      - uses: actions/setup-go@v4
+        uses: actions/setup-go@v4
       - name: Install dependencies
         run: go mod tidy
       - name: Build
