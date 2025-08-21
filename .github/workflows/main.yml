@@ -1,19 +1,17 @@
+---
 name: CI GO
-
 on:
   push:
-    branches: ['**']
-
+    branches:
+      - "**"
 jobs:
   build:
     name: building of code
     runs-on: ubuntu-latest
     steps:
-      - uses : actions/checkout@v3
-
+      - uses: actions/checkout@v3
       - name: setup Go
       - uses: actions/setup-go@v4
-
       - name: Install dependencies
         run: go mod tidy
       - name: Build
