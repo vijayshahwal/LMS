@@ -14,6 +14,8 @@ jobs:
         uses: actions/setup-go@v4
       - name: change dir
         run: cd go-bookstore
+      - name: show current directory
+        run: pwd
       - name: install dependencies
         run: go mod tidy
       - name: Build
