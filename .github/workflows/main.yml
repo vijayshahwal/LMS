@@ -15,7 +15,7 @@ jobs:
       - name: change dir
         run: cd go-bookstore
       - name: show current directory
-        run: pwd
+        run: ls -al
       - name: install dependencies
         run: go mod tidy
       - name: Build
